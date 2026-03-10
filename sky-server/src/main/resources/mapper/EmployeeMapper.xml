@@ -20,7 +20,7 @@
         update employee
         <set>
             <if test="name != null and name != ''">name = #{name},</if>
-            <if test="username != null and username != ''">user_name = #{username},</if>
+            <if test="username != null and username != ''">username = #{username},</if>
             <if test="phone != null and phone != ''">phone = #{phone},</if>
             <if test="sex != null and sex != ''">sex = #{sex},</if>
             <if test="idNumber != null and idNumber != ''">id_number = #{idNumber},</if>
