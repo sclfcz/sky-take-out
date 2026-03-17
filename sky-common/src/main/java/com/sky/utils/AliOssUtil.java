@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.io.ByteArrayInputStream;
 
 @Data
+//全参构造函数
 @AllArgsConstructor
 @Slf4j
 public class AliOssUtil {
