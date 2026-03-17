@@ -9,6 +9,7 @@
         insert into dish (name, category_id, price, image, description, status)
         values (#{name}, #{categoryId}, #{price}, #{image}, #{description}, #{status})
     </insert>
+
     <select id="pageQuery" resultType="com.sky.vo.DishVO">
         select d.*,c.name as categoryName from dish d left outer join category c on d.category_id = c.id
         <where>
@@ -23,4 +24,11 @@
             </if>
         </where>
     </select>
+
+    <delete id="deleteByIds">
+        delete from dish where id in
+        <foreach item="id" collection="ids" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
 </mapper>
